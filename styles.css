@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300&family=League+Spartan:wght@600&family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+div{
+    display: block;
+}
+body{
+    min-height: 100vh;
+    background: white;
+}
+.header {
+    background-color: #121212;
+    width: 100%;
+    height: auto;
+    color: white;
+}
+.header .headcontent {
+    position: relative;
+    top: 10px;
+    font-size: 24px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+    padding: 15px 0;
+}
+.header h1{
+    cursor: pointer;
+}
+nav{
+    text-align: center;
+    width: 100%;
+    height: 47px;
+    background-color: #7bdd79;
+    padding: 0 32px;
+}
+nav ul{
+    list-style-type: none;
+}
+nav li{
+    display: inline-block;
+    padding-left: 20px;
+    padding-top: 16px;
+}
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #121212;
+    font-weight: bold;
+    padding: 16px 0px;
+    width: 68px;
+    height: 19px;
+}
+nav ul li a:hover{
+    color: white;
+    transition: .6s;
+}
+.shadow {
+    position: relative;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.shadow::before,
+.shadow::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 50%;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    border-radius: 10px / 10px;
+}
+.content {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin-top: 100px;
+}
+.container2{
+    width: 450px;
+    height: 150px;
+    margin-right: 100px;
+}
+.container2 h1{
+    font-size: 36px;
+}
+.container2 p{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+.container {
+    width: 450px;
+    height: 250px;    
+}
+.card {
+    position: relative;
+    transition: transform 1500ms;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    perspective: 450px; 
+}
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+.front {
+    background: #121212;
+    box-shadow: 0 15px 30px #00000080;
+    transform-style: preserve-3d;
+    transition: 1s;
+    backface-visibility: hidden;
+}
+.card:hover .front{
+    transform: rotateY(180deg);
+}
+.back {
+    background: white;
+    box-shadow: 0 15px 30px #00000080;
+    transform-style: preserve-3d;
+    transition: 1s;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+.card:hover .back{
+    transform: rotateY(360deg);
+}
+.card .front::before{
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: #7bdd79;  
+    border-radius: 50%;
+    opacity: 0.7;
+}
+.shapes .hline{
+    border: #8FD68D 2px solid;
+}
+.vline{
+    border-left: #8FD68D 4px solid;
+    position: absolute;
+    left: 20rem;
+}
+
+h4{
+    font-size: 35px;
+    font-weight: 900;
+    color: #8FD68D;
+    text-shadow: 1px 0 #8FD68D;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+.container img{
+    width: 150px;
+    height: auto;
+    padding-left: 20px;
+}
+.logo {
+    display: flex;
+    position: absolute;
+    top: 13rem;
+    left: 8px;
+}
+.logo img{
+    width: 63px;
+    height: auto;
+}
+.blbar{
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    height: 35px;
+    background-color: #121212;
+}
+.text {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+}
+.card .back .text h1{
+    color:black;    
+    text-shadow: 1px 0 black;
+    letter-spacing:1px;
+    font-weight:bold;
+}
+.text p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+.link {
+    position: absolute;
+    bottom: 1rem;
+    left: 18rem;
+}
+.barcode{
+    position: absolute;
+    bottom: -5px;
+}
+.footerb{
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    z-index: 10;
+    background-color: #121212;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerb *{
+    padding: 10px;
+}
+.footerb a{
+    text-decoration: none;
+    color: white;
+}
+.footerb img{
+    width: 200px;
+    height: auto;
+}
+.button {
+    margin-top: 20px;
+}
+.button button{
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #7bdd79;
+    border: none;
+    cursor: pointer;
+}
+.button button a{
+    text-decoration: none;
+    color: black;
+}
+.button button:hover{
+    background-color: #121212;
+    transition: 0.1s;
+}
+.button button:hover a{
+    color: white;
+}
